@@ -11,8 +11,11 @@ nav ul{
     list-style: none;
 
 }
-
+a{
+    color: aliceblue;
+}
 nav ul li {
+    
     margin: 0px 20px;
     font-size: 2em;
     padding: 10px 20px;
