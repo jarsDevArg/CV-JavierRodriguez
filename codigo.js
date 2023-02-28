@@ -1,4 +1,6 @@
-const boton = document.querySelector('#boton')
+const botonUsuarioRandom = document.querySelector('#boton-usuario-random')
+const botonUsuarioOriginal = document.querySelector('#boton-usuario-original')
+
 const foto = document.querySelector('#foto')
 const nombre = document.querySelector('#nombre')
 const mail = document.querySelector('#mail')
@@ -16,6 +18,10 @@ const lenguaExt = document.querySelector('#lengua-ext')
 
 const mensajeRobot = "Ninguna, soy solo un usuario falso generado por una API"
 
+const actualizar =() => {
+    location.reload()
+    foto.scrollIntoView()
+}
 const generarUsuario = async() => {
     
 try {
@@ -30,6 +36,7 @@ try {
     mail.textContent = datos.email
     ciudad.textContent = datos.location.city
 
+    expEdu.textContent = mensajeRobot
     listaLaboral.style.display = "none"
     expLaboral.textContent = mensajeRobot
 
@@ -37,11 +44,13 @@ try {
     habSoftware.textContent =mensajeRobot
     lenguaExt.textContent = mensajeRobot
     
+    foto.scrollIntoView()
 
 } catch (error) {
     console('Ocurrió un error al generar usuario: ', error)
 }
 }
 
-boton.addEventListener('click', generarUsuario)
+botonUsuarioRandom.addEventListener('click', generarUsuario)
+botonUsuarioOriginal.addEventListener('click', actualizar)
 
