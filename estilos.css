@@ -5,11 +5,12 @@
 }
 
 
+
 nav ul{
     display: flex;    
     justify-content: center;
     list-style: none;
-
+    
 }
 a{
     color: aliceblue;
@@ -77,14 +78,14 @@ p {
 }
 
 h2 span,
-p span, .contenedor li {
+span, .contenedor li {
     color: rgb(119, 137, 172);
 }
 
 
 
 .contenedor ul{
-margin-left: 10%;
+margin-left: 0px;
 }
 .logo{
 
@@ -119,3 +120,12 @@ button {
 button:hover {
     transform: scale(1.1);
 }
+
+.lista{
+    
+    display:grid;
+    grid-template-columns: 2fr 3fr;
+    grid-row-gap: 10px;
+
+}
+

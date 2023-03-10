@@ -8,7 +8,6 @@ const ciudad = document.querySelector('#ciudad')
 
 const expEdu = document.querySelector('#exp-educativa')
 const expLaboral = document.querySelector('#exp-laboral')
-const listaLaboral = document.querySelector('#lista-exp-laboral')
 
 const habSoftware = document.querySelector('#hab-software')
 const habSoftwareList = document.querySelector('#lista-hab-software')
@@ -16,7 +15,8 @@ const lenguaExt = document.querySelector('#lengua-ext')
 
 
 
-const mensajeRobot = "Ninguna, soy solo un usuario falso generado por una API"
+const mensajeRobot = document.createElement("li")
+mensajeRobot.innerText = "Ninguna, soy solo un usuario falso generado por una API"
 
 const actualizar =() => {
     location.reload()
@@ -36,13 +36,19 @@ try {
     mail.textContent = datos.email
     ciudad.textContent = datos.location.city
 
-    expEdu.textContent = mensajeRobot
-    listaLaboral.style.display = "none"
-    expLaboral.textContent = mensajeRobot
+    expEdu.innerText = ""
+    expEdu.appendChild(mensajeRobot.cloneNode(true))
+    
+    
+    expLaboral.innerText = ""
+    expLaboral.appendChild(mensajeRobot.cloneNode(true))
 
-    habSoftwareList.style.display ="none"
-    habSoftware.textContent =mensajeRobot
-    lenguaExt.textContent = mensajeRobot
+    
+    habSoftware.innerText = ""
+    habSoftware.appendChild(mensajeRobot.cloneNode(true))
+
+    lenguaExt.innerText = ""
+    lenguaExt.appendChild(mensajeRobot.cloneNode(true)) 
     
     foto.scrollIntoView()
 
