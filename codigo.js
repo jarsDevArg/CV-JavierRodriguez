@@ -53,7 +53,7 @@ try {
     foto.scrollIntoView()
 
 } catch (error) {
-    console('Ocurrió un error al generar usuario: ', error)
+    console.log('Ocurrió un error al generar usuario: ', error)
 }
 }
 
